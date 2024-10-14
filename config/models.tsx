@@ -1,5 +1,6 @@
 import { TModelItem } from "@/lib/types";
 
+// List of available providers
 export const providers = [
   "llmchat",
   "openai",
@@ -9,11 +10,13 @@ export const providers = [
   "groq",
 ] as const;
 
+// Models that support tools under Ollama
 export const ollamaModelsSupportsTools = [
   "llama3-groq-tool-use:latest",
   "llama3.2:3b",
 ];
 
+// List of all available plugins
 export const allPlugins = [
   "web_search",
   "image_generation",
@@ -25,6 +28,7 @@ export const allPlugins = [
   "line_chart",
 ];
 
+// Define models with their respective properties
 export const models: TModelItem[] = [
   ...(process.env.NEXT_PUBLIC_ENABLE_AUTH === "true"
     ? ([
@@ -83,11 +87,11 @@ export const models: TModelItem[] = [
     name: "GPT4",
     key: "gpt-4",
     isNew: false,
-    description: "Best for complex tasks",
-
     tokens: 128000,
+    description: "Best for complex tasks",
     maxOutputTokens: 4096,
     plugins: allPlugins,
+    vision: true,
     icon: "gpt4",
     provider: "openai",
   },
@@ -97,7 +101,6 @@ export const models: TModelItem[] = [
     isNew: false,
     tokens: 16384,
     description: "Best for complex tasks",
-
     maxOutputTokens: 4096,
     plugins: allPlugins,
     icon: "gpt3",
@@ -109,7 +112,6 @@ export const models: TModelItem[] = [
     isNew: false,
     tokens: 16384,
     description: "Best for complex tasks",
-
     maxOutputTokens: 4096,
     plugins: allPlugins,
     icon: "gpt3",
@@ -122,7 +124,6 @@ export const models: TModelItem[] = [
     tokens: 200000,
     vision: true,
     description: "Best for complex tasks",
-
     maxOutputTokens: 4096,
     plugins: allPlugins,
     icon: "anthropic",
@@ -134,7 +135,6 @@ export const models: TModelItem[] = [
     isNew: false,
     tokens: 200000,
     description: "Best for complex tasks",
-
     vision: true,
     maxOutputTokens: 4096,
     plugins: allPlugins,
@@ -147,7 +147,6 @@ export const models: TModelItem[] = [
     isNew: false,
     tokens: 200000,
     description: "Best for complex tasks",
-
     vision: true,
     maxOutputTokens: 4096,
     plugins: allPlugins,
@@ -160,7 +159,6 @@ export const models: TModelItem[] = [
     isNew: false,
     tokens: 200000,
     description: "Best for complex tasks",
-
     vision: true,
     maxOutputTokens: 4096,
     plugins: allPlugins,
@@ -174,7 +172,6 @@ export const models: TModelItem[] = [
     tokens: 200000,
     vision: true,
     description: "Best for complex tasks",
-
     maxOutputTokens: 8192,
     plugins: [],
     icon: "gemini",
@@ -186,7 +183,6 @@ export const models: TModelItem[] = [
     isNew: false,
     tokens: 200000,
     description: "Best for complex tasks",
-
     vision: true,
     maxOutputTokens: 8192,
     plugins: [],
@@ -199,33 +195,29 @@ export const models: TModelItem[] = [
     isNew: false,
     tokens: 200000,
     description: "Best for complex tasks",
-
     maxOutputTokens: 4096,
     plugins: [],
     icon: "gemini",
     provider: "gemini",
   },
- {
+  {
     name: "Gemini Flash 1.5 8B",
     key: "gemini-1.5-flash-8b",
     isNew: true,
     tokens: 200000,
     description: "Best for complex tasks",
-
     vision: true,
     maxOutputTokens: 8192,
     plugins: [],
     icon: "gemini",
     provider: "gemini",
   },
-
   {
     name: "LLama3 70b Groq",
     key: "llama3-groq-70b-8192-tool-use-preview",
     isNew: false,
     tokens: 200000,
     description: "Best for complex tasks",
-
     plugins: ["web_search", "image_generation", "memory", "webpage_reader"],
     maxOutputTokens: 4096,
     icon: "groq",
@@ -237,7 +229,6 @@ export const models: TModelItem[] = [
     isNew: false,
     tokens: 200000,
     description: "Best for complex tasks",
-
     plugins: [],
     maxOutputTokens: 4096,
     icon: "groq",
