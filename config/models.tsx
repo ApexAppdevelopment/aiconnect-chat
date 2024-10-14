@@ -181,8 +181,8 @@ export const models: TModelItem[] = [
     provider: "gemini",
   },
   {
-    name: "Gemini Flash 1.5",
-    key: "gemini-1.5-flash-8b",
+    name: "Gemini Flash 1.5 002",
+    key: "gemini-1.5-flash-002",
     isNew: false,
     tokens: 200000,
     description: "Best for complex tasks",
@@ -201,6 +201,19 @@ export const models: TModelItem[] = [
     description: "Best for complex tasks",
 
     maxOutputTokens: 4096,
+    plugins: [],
+    icon: "gemini",
+    provider: "gemini",
+  },
+ {
+    name: "Gemini Flash 1.5 8B",
+    key: "gemini-1.5-flash-8b",
+    isNew: true,
+    tokens: 200000,
+    description: "Best for complex tasks",
+
+    vision: true,
+    maxOutputTokens: 8192,
     plugins: [],
     icon: "gemini",
     provider: "gemini",
