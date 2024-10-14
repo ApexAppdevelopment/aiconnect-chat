@@ -29,7 +29,7 @@ export const models: TModelItem[] = [
   ...(process.env.NEXT_PUBLIC_ENABLE_AUTH === "true"
     ? ([
         {
-          name: "LLMChat",
+          name: "AICONChat",
           key: "llmchat",
           isFree: true,
           isSignUpRequired: true,
@@ -182,7 +182,7 @@ export const models: TModelItem[] = [
   },
   {
     name: "Gemini Flash 1.5",
-    key: "gemini-1.5-flash-latest",
+    key: "gemini-1.5-flash-8b",
     isNew: false,
     tokens: 200000,
     description: "Best for complex tasks",
