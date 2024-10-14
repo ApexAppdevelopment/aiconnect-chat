@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-import { withSentryConfig } from "@sentry/nextjs";
 import { fileURLToPath } from "url";
 
 let nextConfig = {
@@ -53,13 +52,4 @@ let nextConfig = {
   },
 };
 
-export default withSentryConfig(nextConfig, {
-  // Sentry configuration (unchanged)
-  org: "saascollect",
-  project: "javascript-nextjs",
-  silent: !process.env.CI,
-  widenClientFileUpload: true,
-  hideSourceMaps: true,
-  disableLogger: true,
-  automaticVercelMonitors: true,
-});
+export default nextConfig;
